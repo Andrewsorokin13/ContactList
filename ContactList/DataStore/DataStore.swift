@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class ContactService {
+final class DataStore {
     
     // MARK: - Singleton
     
-    static let shared = ContactService()
+    static let shared = DataStore()
     
     private init() {}
     
@@ -71,8 +71,8 @@ final class ContactService {
     
     // MARK: - Methods
     
-    func generateContacts(count: Int = 10) -> [Contact] {
-        var contacts: [Contact] = []
+    func generateContacts(count: Int = 10) -> [Person] {
+        var contacts: [Person] = []
         
         for _ in 0..<count {
             let randomName = names.randomElement() ?? "Unknown"
@@ -82,7 +82,7 @@ final class ContactService {
             let randomEmail = emails.randomElement() ?? "unknown@gmail.com"
             let randomPhone = phoneNumbers.randomElement() ?? "+79000000000"
             
-            let contact = Contact(
+            let contact = Person(
                 fullName: fullName,
                 phoneNumber: randomPhone,
                 email: randomEmail

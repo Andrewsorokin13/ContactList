@@ -16,7 +16,7 @@ final class DetailsViewController: UIViewController {
     
     // MARK: - Properties
     
-    var contact: Contact!
+    var contact: Person!
     
     // MARK: - Lifecycle Methods
     

@@ -11,12 +11,12 @@ final class ContactSectionTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var contacts: [Contact]!
+    var persons: [Person]!
     
     // MARK: - Table View Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        contacts.count
+        persons.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +24,7 @@ final class ContactSectionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        contacts[section].fullName
+        persons[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,7 +32,7 @@ final class ContactSectionTableViewController: UITableViewController {
             withIdentifier: Constans.contactSectionCellIdentifier,
             for: indexPath
         )
-        let contact = contacts[indexPath.row]
+        let contact = persons[indexPath.row]
         var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {

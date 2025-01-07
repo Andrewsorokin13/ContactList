@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="B4Z-fk-xrC" id="9z0-bN-8Sd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="co0-Dt-LzS"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person" catalog="system" id="co0-Dt-LzS"/>
                     <navigationItem key="navigationItem" title="Contact List" id="1ws-am-e2E"/>
                     <connections>
                         <segue destination="HaN-4m-QVH" kind="show" identifier="showDetails" id="uxB-w3-mmb"/>
@@ -130,6 +130,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Persons List" id="and-3v-U0I"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7ZZ-lm-xrX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -173,6 +174,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

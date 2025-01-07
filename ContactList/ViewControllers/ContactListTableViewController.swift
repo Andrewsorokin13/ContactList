@@ -11,12 +11,12 @@ final class ContactListTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var contacts: [Contact]!
+    var persons: [Person]!
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let contact = sender as? Contact
+        let contact = sender as? Person
         let detailsVC = segue.destination as? DetailsViewController
         
         detailsVC?.contact = contact
@@ -25,7 +25,7 @@ final class ContactListTableViewController: UITableViewController {
     // MARK: - Table View Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contacts.count
+        persons.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,7 +33,7 @@ final class ContactListTableViewController: UITableViewController {
             withIdentifier: Constans.contactListCellIdentifier,
             for: indexPath
         )
-        let contact = contacts[indexPath.row]
+        let contact = persons[indexPath.row]
         var content = cell.defaultContentConfiguration()
         
         content.text = contact.fullName
@@ -46,7 +46,7 @@ final class ContactListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(
             withIdentifier: Constans.showDetailsSegueIdentifier,
-            sender: contacts[indexPath.row]
+            sender: persons[indexPath.row]
         )
     }
 }

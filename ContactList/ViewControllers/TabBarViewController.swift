@@ -19,12 +19,12 @@ final class TabBarViewController: UITabBarController {
     // MARK: - Private Methods
     
     private func setViewControllers() {
-        let contacts = ContactService.shared.generateContacts()
+        let persons = DataStore.shared.generateContacts()
         
         let contactsListVC = viewControllers?.first as? ContactListTableViewController
         let contactSectionListVC = viewControllers?.last as? ContactSectionTableViewController
         
-        contactsListVC?.contacts = contacts
-        contactSectionListVC?.contacts = contacts
+        contactsListVC?.persons = persons
+        contactSectionListVC?.persons = persons
     }
 }
